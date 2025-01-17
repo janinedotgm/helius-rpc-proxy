@@ -36,7 +36,7 @@ export default {
 
 		const upgradeHeader = request.headers.get('Upgrade')
 
-		if (upgradeHeader || upgradeHeader === 'websocket') {
+		if (upgradeHeader === 'websocket') {
 			return await fetch(`https://mainnet.helius-rpc.com/?api-key=${env.HELIUS_API_KEY}`, request)
 		}
 
